@@ -76,5 +76,4 @@
   imports = [
     ./home
   ];
-
 }

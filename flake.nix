@@ -51,6 +51,7 @@
         configuration
         home-manager.darwinModules.home-manager
         {
+          # This is required since setting home in ./home.nix doesn't work. Revisit.
           users.users.alexcaza.home = "/Users/alexcaza";
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;

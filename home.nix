@@ -30,6 +30,9 @@
     nil
     alejandra
     starship
+    rust-analyzer
+    rustc
+    clippy
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

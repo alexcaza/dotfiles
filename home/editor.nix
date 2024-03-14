@@ -12,6 +12,10 @@
           select = "block";
         };
         rulers = [80];
+        lsp = {
+          display-messages = true;
+          display-inlay-hints = true;
+        };
       };
       keys = let
         movement = {
@@ -52,6 +56,11 @@
           command = "alejandra";
           args = ["-qq" "-"];
         };
+        rust-analyzer = {
+          command = "rust-analyzer";
+          config.checkOnSave.command = ["clippy" "check"];
+          checkOnSave.enabled = true;
+        };
       };
 
       language = [
@@ -67,6 +76,11 @@
         {
           name = "nix";
           language-servers = ["nil" "alejandra"];
+          auto-format = true;
+        }
+        {
+          name = "rust";
+          language-servers = ["rust-analyzer"];
           auto-format = true;
         }
       ];

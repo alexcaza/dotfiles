@@ -22,6 +22,7 @@
     helix
     wezterm
     lazygit
+    gitui
     nodePackages.typescript-language-server
     go_1_22
     gopls

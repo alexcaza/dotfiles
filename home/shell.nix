@@ -19,6 +19,9 @@
       theme = "robbyrussell";
       plugins = ["git" "z" "direnv"];
     };
+
+    # Required to get homebrew to work
+    initExtraFirst = ''eval "$(/opt/homebrew/bin/brew shellenv)"'';
   };
 
   programs.starship = {

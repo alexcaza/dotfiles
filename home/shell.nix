@@ -9,6 +9,7 @@
       ll = "ls -l";
       update = "darwin-rebuild switch --flake ~/.config/nix-darwin";
       lg = "lazygit";
+      gui = "gitui";
     };
     history.size = 10000;
     history.path = "${config.xdg.dataHome}/zsh/history";

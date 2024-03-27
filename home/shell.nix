@@ -21,7 +21,10 @@
     };
 
     # Required to get homebrew to work
-    initExtraFirst = ''eval "$(/opt/homebrew/bin/brew shellenv)"'';
+    initExtraFirst = ''
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+      compctl -g '~/.weztermocil/*(:t:r)' weztermocil
+    '';
   };
 
   programs.starship = {

@@ -10,6 +10,12 @@
 
   homebrew = {
     enable = true;
+    onActivation.cleanup = "uninstall";
+    onActivation.upgrade = true;
+
+    taps = [];
+    brews = [];
+    casks = [];
   };
 
   # Auto upgrade nix package and the daemon service.

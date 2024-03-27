@@ -26,8 +26,8 @@
               src = super.fetchFromGitHub {
                 owner = "alexcaza";
                 repo = "weztermocil";
-                rev = "v0.1.2";
-                hash = "sha256-tHftuC/cDkYXo0poTu7/sK4mRuPrzeqB4QCV6fJMVHI=";
+                rev = "v0.1.3";
+                hash = "sha256-cmRux3xaTPY+Te5+MII87zbr/O7AI+AXicFtrgd4ECY=";
               };
             in {
               weztermocil = super.callPackage src {};

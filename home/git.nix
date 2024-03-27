@@ -16,6 +16,9 @@
         autosetupremote = true;
         default = "current";
       };
+      pull = {
+        rebase = true;
+      };
     };
 
     ignores = [

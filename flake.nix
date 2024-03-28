@@ -14,13 +14,14 @@
     nix-darwin,
     nixpkgs,
     home-manager,
-  } @ inputs: {
-    # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#Countess-Sparkles
-    darwinConfigurations."Countess-Sparkles" = nix-darwin.lib.darwinSystem {
-      modules = [
-        home-manager.darwinModules.home-manager
-        {
+  } @ inputs: let
+    sharedConfigs = {
+      self,
+      nix-darwin,
+      nixpkgs,
+      home-manager,
+      ...
+    }: {
           nixpkgs.overlays = [
             (self: super: let
               src = super.fetchFromGitHub {
@@ -33,7 +34,6 @@
               weztermocil = super.callPackage src {};
             })
           ];
-          users.users.alexcaza.home = "/Users/alexcaza";
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.alexcaza = {
@@ -41,12 +41,38 @@
               ./home.nix
             ];
           };
+    };
+  in {
+    # Build darwin flake using:
+    # $ darwin-rebuild build --flake .#Countess-Sparkles
+    darwinConfigurations.Countess-Sparkles = nix-darwin.lib.darwinSystem {
+      system = "aarch64-darwin";
+      inherit inputs;
+
+      modules = [
+        home-manager.darwinModules.home-manager
+        sharedConfigs
+        {
+          users.users.alexcaza.home = "/Users/alexcaza";
         }
         ./darwin.nix
       ];
     };
 
-    # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations."Countess-Sparkles".pkgs;
+    # Build darwin flake using:
+    # $ darwin-rebuild build --flake .#Alexs-Macbook-Pro
+    darwinConfigurations.Alexs-MacBook-Pro = nix-darwin.lib.darwinSystem {
+      system = "aarch64-darwin";
+      inherit inputs;
+
+      modules = [
+        home-manager.darwinModules.home-manager
+        sharedConfigs
+        {
+          users.users.alexcaza.home = "/Users/alexcaza";
+        }
+        ./darwin.nix
+      ];
+    };
   };
 }

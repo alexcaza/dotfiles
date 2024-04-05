@@ -14,7 +14,7 @@
     onActivation.upgrade = true;
 
     taps = [];
-    brews = [];
+    brews = ["arm-linux-gnueabihf-binutils"];
     casks = [];
   };
 

@@ -39,6 +39,8 @@
     weztermocil
     delta
     biome
+    nodejs_21
+    yarn
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

@@ -41,6 +41,7 @@
     biome
     nodejs_21
     yarn
+    awscli2
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

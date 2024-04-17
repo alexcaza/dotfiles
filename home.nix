@@ -42,6 +42,7 @@
     nodejs_21
     yarn
     awscli2
+    lua-language-server
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

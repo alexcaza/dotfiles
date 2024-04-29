@@ -10,6 +10,7 @@
       update = "darwin-rebuild switch --flake ~/.config/nix-darwin";
       lg = "lazygit";
       gui = "gitui";
+      gcub = "git fetch --prune && git branch -vv | awk '/: gone]/ {print $1}' | xargs git branch -D";
     };
     history.size = 10000;
     history.path = "${config.xdg.dataHome}/zsh/history";

@@ -61,6 +61,9 @@
           config.checkOnSave.command = ["clippy" "check"];
           checkOnSave.enabled = true;
         };
+        clojure = {
+          command = "clojure-lsp";
+        };
       };
 
       language = [
@@ -81,6 +84,11 @@
         {
           name = "rust";
           language-servers = ["rust-analyzer"];
+          auto-format = true;
+        }
+        {
+          name = "clojure";
+          language-servers = ["clojure"];
           auto-format = true;
         }
       ];

@@ -43,6 +43,7 @@
     yarn
     awscli2
     lua-language-server
+    clojure-lsp
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

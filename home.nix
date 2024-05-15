@@ -40,7 +40,7 @@
     weztermocil
     delta
     biome
-    nodejs_21
+    nodejs_22
     yarn
     awscli2
     lua-language-server

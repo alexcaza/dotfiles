@@ -20,9 +20,9 @@
       pull = {
         rebase = true;
       };
-    commit = {
-      gpgsign = true;
-    };
+      commit = {
+        gpgsign = true;
+      };
     };
 
     ignores = [

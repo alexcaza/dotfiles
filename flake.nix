@@ -22,25 +22,25 @@
       home-manager,
       ...
     }: {
-          nixpkgs.overlays = [
-            (self: super: let
-              src = super.fetchFromGitHub {
-                owner = "alexcaza";
-                repo = "weztermocil";
-                rev = "v0.1.4";
-                hash = "sha256-9NWhGnLxZtHKHAUZ3Ha5NlMMZ7RZ0Irc50HyILX1MjA=";
-              };
-            in {
-              weztermocil = super.callPackage src {};
-            })
-          ];
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.alexcaza = {
-            imports = [
-              ./home.nix
-            ];
+      nixpkgs.overlays = [
+        (self: super: let
+          src = super.fetchFromGitHub {
+            owner = "alexcaza";
+            repo = "weztermocil";
+            rev = "v0.1.4";
+            hash = "sha256-9NWhGnLxZtHKHAUZ3Ha5NlMMZ7RZ0Irc50HyILX1MjA=";
           };
+        in {
+          weztermocil = super.callPackage src {};
+        })
+      ];
+      home-manager.useGlobalPkgs = true;
+      home-manager.useUserPackages = true;
+      home-manager.users.alexcaza = {
+        imports = [
+          ./home.nix
+        ];
+      };
     };
   in {
     # Build darwin flake using:

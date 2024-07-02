@@ -6,6 +6,7 @@
       user = {
         name = "Alex Caza";
         email = "alex@alexcaza.com";
+        signingkey = "9CEED67B704952E8";
       };
 
       init.defaultbranch = "main";
@@ -19,6 +20,9 @@
       pull = {
         rebase = true;
       };
+    commit = {
+      gpgsign = true;
+    };
     };
 
     ignores = [

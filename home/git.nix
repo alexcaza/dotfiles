@@ -23,6 +23,9 @@
       commit = {
         gpgsign = true;
       };
+      fetch = {
+        prune = true;
+      };
     };
 
     ignores = [

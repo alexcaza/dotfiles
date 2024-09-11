@@ -15,7 +15,16 @@
 
     taps = [];
     brews = ["arm-linux-gnueabihf-binutils"];
-    casks = ["stats"];
+    casks = [
+      "stats"
+      "raycast"
+      "brave-browser"
+      "proton-pass"
+      "proton-mail"
+      "obsidian"
+      "spotify"
+      "dbeaver-community"
+    ];
   };
 
   # Auto upgrade nix package and the daemon service.

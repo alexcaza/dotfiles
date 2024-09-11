@@ -19,6 +19,7 @@
       init.defaultbranch = "main";
 
       github.user = "alexcaza";
+      hf.user = "alex@alexcaza.com";
 
       push = {
         autosetupremote = true;

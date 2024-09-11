@@ -2,6 +2,8 @@
   programs.git = {
     enable = true;
 
+    lfs.enable = true;
+
     aliases = {
       gone = "!git fetch -p && \
               git for-each-ref --format '%(refname:short) %(upstream:track)' | \

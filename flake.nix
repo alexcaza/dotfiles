@@ -22,6 +22,9 @@
       home-manager,
       ...
     }: {
+      nixpkgs.config = {
+        allowUnfree = true;
+      };
       nixpkgs.overlays = [
         (self: super: let
           src = super.fetchFromGitHub {

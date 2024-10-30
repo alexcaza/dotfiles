@@ -12,6 +12,7 @@
     enable = true;
     onActivation.cleanup = "uninstall";
     onActivation.upgrade = true;
+    onActivation.autoUpdate = true;
 
     taps = [];
     brews = ["arm-linux-gnueabihf-binutils"];

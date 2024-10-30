@@ -48,6 +48,9 @@ config.inactive_pane_hsb = {
     saturation = 0.8
 }
 
+-- Hack needed to get latest Wezterm working
+config.front_end = 'WebGpu'
+
 -- and finally, return the configuration to wezterm
 return config
 ";

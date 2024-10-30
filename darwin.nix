@@ -18,13 +18,13 @@
     brews = ["arm-linux-gnueabihf-binutils"];
     casks = [
       "stats"
-      "raycast"
-      "brave-browser"
-      "proton-pass"
-      "proton-mail"
-      "obsidian"
-      "spotify"
-      "dbeaver-community"
+      # "raycast"
+      # "brave-browser"
+      # "proton-pass"
+      # "proton-mail"
+      # "obsidian"
+      # "spotify"
+      # "dbeaver-community"
     ];
   };
 

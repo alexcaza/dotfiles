@@ -51,8 +51,11 @@
     kepubify
     tree
     tesseract
-    graphite-cli
-    llama-cpp
+    pinentry_mac
+
+    # Work
+    devenv # API environment setup
+    gh
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -98,6 +101,12 @@
 
   programs.gpg.enable = true;
 
+  services.gpg-agent.enable = true;
+  services.gpg-agent.extraConfig = "
+    allow-loopback-pinentry
+    pinentry-program /etc/profiles/per-user/alexcaza/bin/pinentry-mac
+  ";
+  
   imports = [
     ./home
   ];

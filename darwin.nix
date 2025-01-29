@@ -15,7 +15,13 @@
     onActivation.autoUpdate = true;
 
     taps = [];
-    brews = ["arm-linux-gnueabihf-binutils"];
+    brews = [
+    # RPI Zero builds
+    # "arm-linux-gnueabihf-binutils" 
+
+    # Work
+    "vips" # For use with API
+    ];
     casks = [
       "stats"
       # "raycast"

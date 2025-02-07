@@ -1,5 +1,4 @@
 {
-
   programs.zed-editor = {
     enable = true;
     installRemoteServer = true;
@@ -42,7 +41,7 @@
     };
 
     userKeymaps = [
-       {
+      {
         context = "Editor";
         bindings = {
           "alt-o" = "vim::SelectLargerSyntaxNode";

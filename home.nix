@@ -107,7 +107,7 @@
     allow-loopback-pinentry
     pinentry-program /etc/profiles/per-user/alexcaza/bin/pinentry-mac
   ";
-  
+
   imports = [
     ./home
   ];

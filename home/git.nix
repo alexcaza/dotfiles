@@ -39,6 +39,7 @@
     };
 
     ignores = [
+      ".zed"
       ".helix/"
       ".trash/"
       ".obsidian/"

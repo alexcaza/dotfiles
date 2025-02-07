@@ -16,11 +16,11 @@
 
     taps = [];
     brews = [
-    # RPI Zero builds
-    # "arm-linux-gnueabihf-binutils" 
+      # RPI Zero builds
+      # "arm-linux-gnueabihf-binutils"
 
-    # Work
-    "vips" # For use with API
+      # Work
+      "vips" # For use with API
     ];
     casks = [
       "stats"

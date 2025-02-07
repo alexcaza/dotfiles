@@ -1,4 +1,58 @@
 {
+
+  programs.zed-editor = {
+    enable = true;
+    installRemoteServer = true;
+
+    extensions = [
+      "biome"
+      "html"
+      "dockerfile"
+      "docker-compose"
+      "nix"
+      "sql"
+      "emmet"
+      "lua"
+      "ruby"
+    ];
+
+    userSettings = {
+      base_keymap = "VSCode";
+
+      vim_mode = true;
+
+      lsp = {
+        biome = {
+          settings = {
+            require_config_file = true;
+          };
+        };
+      };
+
+      theme = {
+        mode = "system";
+        light = "Catppuccin Latte";
+        dark = "Catppuccin Frappé";
+      };
+
+      code_actions_on_format = {
+        "source.fixAll.biome" = true;
+        "source.organizeImports.biome" = true;
+      };
+    };
+
+    userKeymaps = [
+       {
+        context = "Editor";
+        bindings = {
+          "alt-o" = "vim::SelectLargerSyntaxNode";
+          "alt-i" = "vim::SelectSmallerSyntaxNode";
+        };
+      }
+    ];
+  };
+
+  # Keeping for history sake and the occasional time I need to quickly open a file
   programs.helix = {
     enable = true;
     defaultEditor = true;

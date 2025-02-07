@@ -52,6 +52,7 @@
     tree
     tesseract
     pinentry_mac
+    zed-editor
 
     # Work
     devenv # API environment setup

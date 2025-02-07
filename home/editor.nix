@@ -16,27 +16,22 @@
     ];
 
     userSettings = {
+      assistant = {
+        default_model = {
+          provider = "zed.dev";
+          model = "claude-3-5-sonnet-latest";
+        };
+        version = "2";
+      };
+
       base_keymap = "VSCode";
 
       vim_mode = true;
-
-      lsp = {
-        biome = {
-          settings = {
-            require_config_file = true;
-          };
-        };
-      };
 
       theme = {
         mode = "system";
         light = "Catppuccin Latte";
         dark = "Catppuccin Frappé";
-      };
-
-      code_actions_on_format = {
-        "source.fixAll.biome" = true;
-        "source.organizeImports.biome" = true;
       };
     };
 

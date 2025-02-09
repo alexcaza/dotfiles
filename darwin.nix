@@ -18,6 +18,7 @@
     brews = [
       # RPI Zero builds
       # "arm-linux-gnueabihf-binutils"
+      "hq"
 
       # Work
       "vips" # For use with API

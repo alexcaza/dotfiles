@@ -11,6 +11,7 @@
       lg = "lazygit";
       gui = "gitui";
       gcub = "git fetch --prune && git branch -vv | awk '/: gone]/ {print $1}' | xargs git branch -D";
+      love = "/Applications/love.app/Contents/MacOS/love";
     };
     history.size = 10000;
     history.path = "${config.xdg.dataHome}/zsh/history";

@@ -13,9 +13,18 @@
       "emmet"
       "lua"
       "ruby"
+      "astro"
+      "nginx"
+      "templ"
+      "caddyfile"
+      "justfile"
     ];
 
     userSettings = {
+      "features" = {
+        "edit_prediction_provider" = "supermaven";
+        "inline_prediction_provider" = "supermaven";
+      };
       assistant = {
         default_model = {
           provider = "zed.dev";

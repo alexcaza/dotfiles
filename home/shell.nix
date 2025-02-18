@@ -23,9 +23,14 @@
     };
 
     # Required to get homebrew to work
+    # Also have to add zed here since home manager
+    # configs don't have support for setting defaultEditor yet.
     initExtraFirst = ''
       eval "$(/opt/homebrew/bin/brew shellenv)"
       compctl -g '~/.weztermocil/*(:t:r)' weztermocil
+
+      VISUAL="zed --wait"
+      EDITOR="zed --wait"
     '';
   };
 

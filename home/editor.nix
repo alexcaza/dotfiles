@@ -58,7 +58,6 @@
   # Keeping for history sake and the occasional time I need to quickly open a file
   programs.helix = {
     enable = true;
-    defaultEditor = true;
 
     settings = {
       theme = "github_light_high_contrast";

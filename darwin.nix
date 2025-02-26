@@ -25,6 +25,7 @@
     ];
     casks = [
       "stats"
+      "ghostty"
       # "raycast"
       # "brave-browser"
       # "proton-pass"

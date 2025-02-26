@@ -1,4 +1,8 @@
 {
+  pkgs,
+  lib,
+  ...
+}: {
   programs.wezterm = {
     enable = true;
     enableZshIntegration = true;
@@ -54,5 +58,28 @@ config.front_end = 'WebGpu'
 -- and finally, return the configuration to wezterm
 return config
 ";
+  };
+
+  # Ghostty is installed outside of nix. It's currently unsupported via nix on macOS
+  # It's installed via nix-darwin
+  programs.ghostty = {
+    enable = true;
+    enableZshIntegration = true;
+
+    package = pkgs.emptyDirectory;
+
+    settings = {
+      cursor-style-blink = false;
+      cursor-style = "block";
+      font-family = "CommitMono";
+      font-size = 16;
+      font-feature = "+liga";
+      window-padding-x = 8;
+      window-padding-y = 8;
+
+      # catppuccin currently only supports one universal theme:
+      #   https://github.com/catppuccin/nix/issues/420
+      theme = lib.mkForce "light:catppuccin-latte,dark:catppuccin-mocha";
+    };
   };
 }

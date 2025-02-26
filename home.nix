@@ -23,6 +23,7 @@
     wezterm
     lazygit
     gitui
+    jujutsu
     nodePackages.typescript-language-server
     vscode-langservers-extracted
     go_1_22

@@ -18,6 +18,7 @@
       "templ"
       "caddyfile"
       "justfile"
+      "catppuccin"
     ];
 
     userSettings = {
@@ -50,6 +51,7 @@
         bindings = {
           "alt-o" = "vim::SelectLargerSyntaxNode";
           "alt-i" = "vim::SelectSmallerSyntaxNode";
+          "ctrl-x" = "editor::ShowCompletions";
         };
       }
     ];

@@ -77,4 +77,20 @@
     )
     ";
   };
+
+  programs.jujutsu = {
+    enable = true;
+    settings = {
+      user = {
+        name = "Alex Caza";
+        email = "alex@alexcaza.com";
+      };
+
+      signing = {
+        sign-all = true;
+        backend = "gpg";
+        key = "9CEED67B704952E8";
+      };
+    };
+  };
 }

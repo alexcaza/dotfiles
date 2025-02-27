@@ -86,6 +86,10 @@
         email = "alex@alexcaza.com";
       };
 
+      ui = {
+        editor = "zed --wait";
+      };
+
       signing = {
         sign-all = true;
         backend = "gpg";

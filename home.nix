@@ -24,6 +24,7 @@
     lazygit
     gitui
     jujutsu
+    lazyjj
     nodePackages.typescript-language-server
     vscode-langservers-extracted
     go_1_22

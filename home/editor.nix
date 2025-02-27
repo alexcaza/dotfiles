@@ -27,10 +27,9 @@
         "inline_prediction_provider" = "supermaven";
       };
       assistant = {
-
         default_model = {
-          provider = "google";
-          model = "gemini-2.0-pro-exp";
+          provider = "zed.dev";
+          model = "claude-3-5-sonnet-latest";
         };
         version = "2";
       };

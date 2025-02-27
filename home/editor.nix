@@ -28,8 +28,8 @@
       };
       assistant = {
         default_model = {
-          provider = "zed.dev";
-          model = "claude-3-5-sonnet-latest";
+          provider = "google";
+          model = "gemini-2.0-pro-exp";
         };
         version = "2";
       };

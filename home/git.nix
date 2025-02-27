@@ -40,6 +40,7 @@
 
     ignores = [
       ".zed"
+      ".jj"
       ".helix/"
       ".trash/"
       ".obsidian/"
@@ -87,7 +88,7 @@
       };
 
       ui = {
-        editor = "zed --wait";
+        editor = "zeditor --wait";
       };
 
       signing = {

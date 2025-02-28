@@ -19,6 +19,8 @@
       "caddyfile"
       "justfile"
       "catppuccin"
+      # For legacy projects
+      "scss"
     ];
 
     userSettings = {

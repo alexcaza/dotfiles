@@ -11,6 +11,7 @@
               xargs -r git branch -D";
     };
 
+
     extraConfig = {
       user = {
         name = "Alex Caza";
@@ -35,6 +36,9 @@
       };
       fetch = {
         prune = true;
+      };
+      core = {
+        pager = "delta";
       };
     };
 
@@ -95,6 +99,18 @@
         sign-all = true;
         backend = "gpg";
         key = "9CEED67B704952E8";
+      };
+    };
+  };
+
+  programs.lazygit = {
+    enable = true;
+
+    settings = {
+      git.overrideGpg = true;
+      git.paging = {
+        colorArg = "always";
+        pager = "delta --dark --paging=never --side-by-side";
       };
     };
   };

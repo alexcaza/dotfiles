@@ -28,6 +28,7 @@
         "edit_prediction_provider" = "supermaven";
         "inline_prediction_provider" = "supermaven";
       };
+      show_edit_predictions = true;
       assistant = {
         default_model = {
           provider = "google";

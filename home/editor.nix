@@ -58,6 +58,12 @@
           "ctrl-x" = "editor::ShowCompletions";
         };
       }
+      {
+        context = "vim_mode == visual";
+        bindings = {
+          "shift-s" = "vim::PushAddSurrounds";
+        };
+      }
     ];
   };
 

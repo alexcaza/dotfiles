@@ -19,6 +19,7 @@
       "caddyfile"
       "justfile"
       "catppuccin"
+      "zig"
       # For legacy projects
       "scss"
     ];

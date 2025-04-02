@@ -19,6 +19,7 @@
       # RPI Zero builds
       # "arm-linux-gnueabihf-binutils"
       "hq"
+      "zig"
 
       # Work
       "vips" # For use with API

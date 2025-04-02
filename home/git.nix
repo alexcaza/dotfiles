@@ -11,7 +11,6 @@
               xargs -r git branch -D";
     };
 
-
     extraConfig = {
       user = {
         name = "Alex Caza";

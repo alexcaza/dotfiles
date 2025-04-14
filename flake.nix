@@ -59,6 +59,7 @@
           users.users.alexcaza.home = "/Users/alexcaza";
         }
         ./darwin.nix
+        ./machines/countess-sparkles.nix
       ];
     };
 
@@ -75,6 +76,7 @@
           users.users.alexcaza.home = "/Users/alexcaza";
         }
         ./darwin.nix
+        ./machines/countess-sparkles.nix
       ];
     };
   };

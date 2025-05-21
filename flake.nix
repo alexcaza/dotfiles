@@ -64,8 +64,8 @@
     };
 
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#Alexs-Macbook-Pro
-    darwinConfigurations.Alexs-MacBook-Pro = nix-darwin.lib.darwinSystem {
+    # $ darwin-rebuild build --flake .#Alexs-Workbook
+    darwinConfigurations.Alexs-Workbook = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       inherit inputs;
 
@@ -76,7 +76,7 @@
           users.users.alexcaza.home = "/Users/alexcaza";
         }
         ./darwin.nix
-        ./machines/countess-sparkles.nix
+        ./machines/alexs-workbook.nix
       ];
     };
   };

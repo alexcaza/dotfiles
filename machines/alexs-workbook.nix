@@ -6,6 +6,8 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = [
     pkgs.vim
+    pkgs.devenv # API environment setup
+    pkgs.gh
   ];
 
   homebrew = {
@@ -34,6 +36,15 @@
        "obsidian"
        "spotify"
        "dbeaver-community"
+       "1password"
+       "zen-browser"
+       "google-chrome"
+       "firefox"
+       "microsoft-edge"
+       "linear-linear"
+       "slack"
+       "setapp"
+       "zoom"
     ];
   };
 

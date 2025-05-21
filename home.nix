@@ -55,10 +55,7 @@
     tesseract
     pinentry_mac
     zed-editor
-
-    # Work
-    devenv # API environment setup
-    gh
+    supersonic
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

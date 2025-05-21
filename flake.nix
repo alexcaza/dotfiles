@@ -44,6 +44,9 @@
           ./home.nix
         ];
       };
+
+      # Required for nix-darwin and homebrew
+      system.primaryUser = "alexcaza";
     };
   in {
     # Build darwin flake using:

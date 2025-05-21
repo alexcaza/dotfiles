@@ -27,7 +27,7 @@
     lazyjj
     nodePackages.typescript-language-server
     vscode-langservers-extracted
-    go_1_22
+    go
     gopls
     gotools
     delve

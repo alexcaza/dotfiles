@@ -8,6 +8,7 @@
     pkgs.vim
     pkgs.devenv # API environment setup
     pkgs.gh
+    pkgs.http-server
   ];
 
   homebrew = {

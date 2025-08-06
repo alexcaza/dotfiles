@@ -20,6 +20,8 @@
       "justfile"
       "catppuccin"
       "zig"
+      "css"
+      "css-modules-kit"
       # For legacy projects
       "scss"
     ];
@@ -158,6 +160,10 @@
           name = "clojure";
           language-servers = ["clojure"];
           auto-format = true;
+        }
+        {
+          name = "css";
+          language-servers = ["vtsls"];
         }
       ];
     };

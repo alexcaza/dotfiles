@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # This is required since setting home in ./home.nix doesn't work. Revisit.
   users.users.alexcaza.home = "/Users/alexcaza";
 
@@ -6,6 +7,7 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = [
     pkgs.vim
+    pkgs.biome
   ];
 
   homebrew = {
@@ -14,7 +16,7 @@
     onActivation.upgrade = true;
     onActivation.autoUpdate = true;
 
-    taps = [];
+    taps = [ ];
     brews = [
       # RPI Zero builds
       # "arm-linux-gnueabihf-binutils"

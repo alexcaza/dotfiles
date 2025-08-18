@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "alexcaza";
@@ -41,7 +42,6 @@
     leiningen
     weztermocil
     delta
-    biome
     nodejs_22
     yarn
     awscli2
@@ -88,7 +88,7 @@
   #
   #  /etc/profiles/per-user/alexcaza/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {};
+  home.sessionVariables = { };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

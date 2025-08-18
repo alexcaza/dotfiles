@@ -24,6 +24,7 @@
       "css-modules-kit"
       # For legacy projects
       "scss"
+      "just"
     ];
 
     userSettings = {
@@ -81,34 +82,34 @@
           normal = "block";
           select = "block";
         };
-        rulers = [80];
+        rulers = [ 80 ];
         lsp = {
           display-messages = true;
           display-inlay-hints = true;
         };
       };
-      keys = let
-        movement = {
-          "{" = "goto_prev_paragraph";
-          "}" = "goto_next_paragraph";
-        };
-      in {
-        normal =
-          movement
-          // {
+      keys =
+        let
+          movement = {
+            "{" = "goto_prev_paragraph";
+            "}" = "goto_next_paragraph";
+          };
+        in
+        {
+          normal = movement // {
             space = {
               z = ":fmt";
             };
           };
-        select = movement;
-      };
+          select = movement;
+        };
     };
 
     languages = {
       language-server = {
         typescript-language-server = {
           command = "typescript-language-server";
-          args = ["--stdio"];
+          args = [ "--stdio" ];
           config.hostInfo = "helix";
         };
         gopls = {
@@ -124,11 +125,17 @@
         };
         alejandra = {
           command = "alejandra";
-          args = ["-qq" "-"];
+          args = [
+            "-qq"
+            "-"
+          ];
         };
         rust-analyzer = {
           command = "rust-analyzer";
-          config.checkOnSave.command = ["clippy" "check"];
+          config.checkOnSave.command = [
+            "clippy"
+            "check"
+          ];
           checkOnSave.enabled = true;
         };
         clojure = {
@@ -139,31 +146,34 @@
       language = [
         {
           name = "typescript";
-          language-servers = ["typescript-language-server"];
+          language-servers = [ "typescript-language-server" ];
         }
         {
           name = "go";
-          language-servers = ["gopls"];
+          language-servers = [ "gopls" ];
           auto-format = true;
         }
         {
           name = "nix";
-          language-servers = ["nil" "alejandra"];
+          language-servers = [
+            "nil"
+            "alejandra"
+          ];
           auto-format = true;
         }
         {
           name = "rust";
-          language-servers = ["rust-analyzer"];
+          language-servers = [ "rust-analyzer" ];
           auto-format = true;
         }
         {
           name = "clojure";
-          language-servers = ["clojure"];
+          language-servers = [ "clojure" ];
           auto-format = true;
         }
         {
           name = "css";
-          language-servers = ["vtsls"];
+          language-servers = [ "vtsls" ];
         }
       ];
     };

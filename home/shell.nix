@@ -1,4 +1,10 @@
-{config, lib, ...}: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -21,7 +27,11 @@
     oh-my-zsh = {
       enable = true;
       theme = "robbyrussell";
-      plugins = ["git" "z" "direnv"];
+      plugins = [
+        "git"
+        "z"
+        "direnv"
+      ];
     };
 
     # Required to get homebrew to work
@@ -33,6 +43,23 @@
 
       VISUAL="zeditor --wait"
       EDITOR="zeditor --wait"
+    '';
+  };
+
+  programs.direnv = {
+    enable = true;
+    # Avoid cluttering project directories which often conflicts with tooling,
+    # as per: https://github.com/direnv/direnv/wiki/Customizing-cache-location
+    # Pulled from : https://github.com/samhh/dotfiles/blob/42b7fb81702710bfe4f8200ee05bb536c0a2c3ef/home/shell.nix#L81-L93
+    stdlib = ''
+      : ''${XDG_CACHE_HOME:=$HOME/.cache}
+      declare -A direnv_layout_dirs
+      direnv_layout_dir() {
+      	echo "''${direnv_layout_dirs[$PWD]:=$(
+      		echo -n "$XDG_CACHE_HOME"/direnv/layouts/
+      		echo -n "$PWD" | ${pkgs.coreutils}/bin/sha1sum | cut -d ' ' -f 1
+      	)}"
+      }
     '';
   };
 

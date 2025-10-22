@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # This is required since setting home in ./home.nix doesn't work. Revisit.
   users.users.alexcaza.home = "/Users/alexcaza";
 
@@ -17,7 +18,7 @@
     onActivation.upgrade = true;
     onActivation.autoUpdate = true;
 
-    taps = [];
+    taps = [ ];
     brews = [
       # RPI Zero builds
       # "arm-linux-gnueabihf-binutils"
@@ -30,22 +31,22 @@
       "stats"
       "ghostty"
       "dbeaver-community"
-       "raycast"
+      "raycast"
       # "brave-browser"
-       "proton-pass"
-       "proton-mail"
-       "obsidian"
-       "spotify"
-       "dbeaver-community"
-       "1password"
-       "zen-browser"
-       "google-chrome"
-       "firefox"
-       "microsoft-edge"
-       "linear-linear"
-       "slack"
-       "setapp"
-       "zoom"
+      "proton-pass"
+      "proton-mail"
+      "obsidian"
+      "spotify"
+      "dbeaver-community"
+      "1password"
+      "zen"
+      "google-chrome"
+      "firefox"
+      "microsoft-edge"
+      "linear-linear"
+      "slack"
+      "setapp"
+      "zoom"
     ];
   };
 

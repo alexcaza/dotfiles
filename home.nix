@@ -23,7 +23,6 @@
     helix
     wezterm
     lazygit
-    gitui
     jujutsu
     lazyjj
     nodePackages.typescript-language-server

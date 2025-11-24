@@ -2,7 +2,8 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   programs.wezterm = {
     enable = true;
     enableZshIntegration = true;
@@ -44,7 +45,7 @@ config.keys = {
     {
         key = 'D',
         mods = 'CMD',
-        action = wezterm.action.SplitVertical 
+        action = wezterm.action.SplitVertical
     },
 }
 config.inactive_pane_hsb = {
@@ -79,7 +80,7 @@ return config
 
       # catppuccin currently only supports one universal theme:
       #   https://github.com/catppuccin/nix/issues/420
-      theme = lib.mkForce "light:catppuccin-latte,dark:catppuccin-mocha";
+      theme = lib.mkForce "light:Catppuccin Lattee,dark:Catppuccin Mocha";
     };
   };
 }

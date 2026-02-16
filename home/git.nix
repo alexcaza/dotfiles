@@ -78,10 +78,12 @@
 
     settings = {
       git.overrideGpg = true;
-      git.paging = {
-        colorArg = "always";
-        pager = "delta --dark --paging=never --side-by-side";
-      };
+      git.pagers = [
+        {
+          colorArg = "always";
+          pager = "delta --dark --paging=never --side-by-side";
+        }
+      ];
     };
   };
 }

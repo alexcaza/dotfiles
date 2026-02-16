@@ -7,6 +7,7 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    zed.url = "github:zed-industries/zed";
   };
 
   outputs = {
@@ -14,6 +15,7 @@
     nix-darwin,
     nixpkgs,
     home-manager,
+    zed,
   } @ inputs: let
     sharedConfigs = {
       self,
@@ -43,6 +45,10 @@
         imports = [
           ./home.nix
         ];
+      };
+
+      home-manager.extraSpecialArgs = {
+        inherit inputs;
       };
 
       # Required for nix-darwin and homebrew

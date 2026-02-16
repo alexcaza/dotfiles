@@ -1,7 +1,14 @@
 {
+  inputs,
+  pkgs,
+  ...
+}: {
   programs.zed-editor = {
     enable = true;
     installRemoteServer = true;
+    package = inputs.zed.packages.${pkgs.system}.default.overrideAttrs (oldAttrs: {
+      doCheck = false;
+    });
 
     extensions = [
       "biome"
@@ -22,6 +29,8 @@
       "zig"
       "css"
       "css-modules-kit"
+      "tsgo"
+      "oxc-zed"
       # For legacy projects
       "scss"
       "just"
@@ -32,6 +41,7 @@
         "edit_prediction_provider" = "supermaven";
         "inline_prediction_provider" = "supermaven";
       };
+      colorize_brackets = true;
       show_edit_predictions = true;
       assistant = {
         default_model = {
@@ -82,34 +92,34 @@
           normal = "block";
           select = "block";
         };
-        rulers = [ 80 ];
+        rulers = [80];
         lsp = {
           display-messages = true;
           display-inlay-hints = true;
         };
       };
-      keys =
-        let
-          movement = {
-            "{" = "goto_prev_paragraph";
-            "}" = "goto_next_paragraph";
-          };
-        in
-        {
-          normal = movement // {
+      keys = let
+        movement = {
+          "{" = "goto_prev_paragraph";
+          "}" = "goto_next_paragraph";
+        };
+      in {
+        normal =
+          movement
+          // {
             space = {
               z = ":fmt";
             };
           };
-          select = movement;
-        };
+        select = movement;
+      };
     };
 
     languages = {
       language-server = {
         typescript-language-server = {
           command = "typescript-language-server";
-          args = [ "--stdio" ];
+          args = ["--stdio"];
           config.hostInfo = "helix";
         };
         gopls = {
@@ -146,11 +156,11 @@
       language = [
         {
           name = "typescript";
-          language-servers = [ "typescript-language-server" ];
+          language-servers = ["typescript-language-server"];
         }
         {
           name = "go";
-          language-servers = [ "gopls" ];
+          language-servers = ["gopls"];
           auto-format = true;
         }
         {
@@ -163,17 +173,17 @@
         }
         {
           name = "rust";
-          language-servers = [ "rust-analyzer" ];
+          language-servers = ["rust-analyzer"];
           auto-format = true;
         }
         {
           name = "clojure";
-          language-servers = [ "clojure" ];
+          language-servers = ["clojure"];
           auto-format = true;
         }
         {
           name = "css";
-          language-servers = [ "vtsls" ];
+          language-servers = ["vtsls"];
         }
       ];
     };

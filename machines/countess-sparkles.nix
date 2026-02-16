@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   # This is required since setting home in ./home.nix doesn't work. Revisit.
   users.users.alexcaza.home = "/Users/alexcaza";
 
@@ -16,7 +15,7 @@
     onActivation.upgrade = true;
     onActivation.autoUpdate = true;
 
-    taps = [ ];
+    taps = [];
     brews = [
       # RPI Zero builds
       # "arm-linux-gnueabihf-binutils"

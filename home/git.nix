@@ -4,18 +4,18 @@
 
     lfs.enable = true;
 
-    aliases = {
-      gone = "!git fetch -p && \
-              git for-each-ref --format '%(refname:short) %(upstream:track)' | \
-              awk '$2 == \"[gone]\" {print $1}' | \
-              xargs -r git branch -D";
-    };
-
-    extraConfig = {
+    settings = {
       user = {
         name = "Alex Caza";
         email = "alex@alexcaza.com";
         signingkey = "9CEED67B704952E8";
+      };
+
+      aliases = {
+        gone = "!git fetch -p && \
+                    git for-each-ref --format '%(refname:short) %(upstream:track)' | \
+                    awk '$2 == \"[gone]\" {print $1}' | \
+                    xargs -r git branch -D";
       };
 
       init.defaultbranch = "main";

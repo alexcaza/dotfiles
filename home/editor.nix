@@ -32,6 +32,7 @@
       "css-modules-kit"
       "tsgo"
       "oxc"
+      "mcp-server-context7"
       # For legacy projects
       "scss"
       "just"

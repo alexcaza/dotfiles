@@ -63,6 +63,12 @@
 
       ui = {
         editor = "zeditor --wait";
+        diff-formatter = [
+          "difft"
+          "--color=always"
+          "$left"
+          "$right"
+        ];
       };
 
       signing = {
@@ -81,7 +87,7 @@
       git.pagers = [
         {
           colorArg = "always";
-          pager = "delta --dark --paging=never --side-by-side";
+          externalDiffCommand = "difft";
         }
       ];
     };

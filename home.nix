@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "alexcaza";
@@ -54,6 +55,7 @@
     pinentry_mac
     zed-editor
     supersonic
+    difftastic
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -86,7 +88,7 @@
   #
   #  /etc/profiles/per-user/alexcaza/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {};
+  home.sessionVariables = { };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

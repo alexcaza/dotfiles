@@ -40,17 +40,15 @@
 
     userSettings = {
       features = {
-        "edit_prediction_provider" = "supermaven";
-        "inline_prediction_provider" = "supermaven";
+        "edit_prediction_provider" = "copilot";
       };
       colorize_brackets = true;
       show_edit_predictions = true;
       assistant = {
         default_model = {
-          provider = "google";
-          model = "gemini-2.0-pro-exp";
+          provider = "copilot_chat";
+          model = "gpt-5-mini";
         };
-        version = "2";
       };
 
       base_keymap = "VSCode";

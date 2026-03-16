@@ -60,6 +60,22 @@
         light = "Catppuccin Latte";
         dark = "Catppuccin Frappé";
       };
+
+      context_servers = {
+        linear = {
+          command = {
+            path = "npx";
+            args = [
+              "-y"
+              "mcp-remote"
+              "https://mcp.linear.app/mcp"
+            ];
+          };
+        };
+        figma = {
+          url = "http://127.0.0.1:3845/mcp";
+        };
+      };
     };
 
     userKeymaps = [

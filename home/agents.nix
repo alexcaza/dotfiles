@@ -16,6 +16,7 @@
           "WebFetch"
           "Bash(curl:*)"
           "Read(./.env)"
+          "Read(./.env.*)"
           "Read(./secrets/**)"
         ];
         disableBypassPermissionsMode = "disable";

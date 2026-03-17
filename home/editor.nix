@@ -12,7 +12,6 @@
     });
 
     extensions = [
-      "biome"
       "html"
       "dockerfile"
       "docker-compose"

@@ -32,6 +32,7 @@
       "tsgo"
       "oxc"
       "mcp-server-context7"
+      "comment"
       # For legacy projects
       "scss"
       "just"

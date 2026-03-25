@@ -75,6 +75,13 @@
         figma = {
           url = "http://127.0.0.1:3845/mcp";
         };
+        chrome-devtools = {
+          command = "npx";
+          args = [
+            "-y"
+            "chrome-devtools-mcp@latest"
+          ];
+        };
       };
     };
 

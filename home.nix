@@ -25,11 +25,9 @@
     lazygit
     jujutsu
     lazyjj
-    nodePackages.typescript-language-server
     vscode-langservers-extracted
     go
     gopls
-    gotools
     delve
     nil
     alejandra

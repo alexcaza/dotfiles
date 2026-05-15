@@ -28,6 +28,7 @@
     vscode-langservers-extracted
     go
     gopls
+    ffmpeg
     delve
     nil
     alejandra

@@ -3,26 +3,22 @@
     enable = true;
     enableDefaultConfig = false;
 
-    matchBlocks = {
-      github = {
-        host = "github.com";
-        identityFile = "~/.ssh/github_ssh";
-        addKeysToAgent = "yes";
+    settings = {
+      "github.com" = {
+        IdentityFile = "~/.ssh/github_ssh";
+        AddKeysToAgent = "yes";
       };
-      gitlab = {
-        host = "gitlab.com";
-        identityFile = "~/.ssh/gitlab_ssh";
-        addKeysToAgent = "yes";
+      "gitlab.com" = {
+        IdentityFile = "~/.ssh/gitlab_ssh";
+        AddKeysToAgent = "yes";
       };
-      huggingface = {
-        host = "huggingface.co";
-        identityFile = "~/.ssh/huggingface";
-        addKeysToAgent = "yes";
+      "huggingface.co" = {
+        IdentityFile = "~/.ssh/huggingface";
+        AddKeysToAgent = "yes";
       };
-      hf = {
-        host = "hf.co";
-        identityFile = "~/.ssh/huggingface";
-        addKeysToAgent = "yes";
+      "hf.co" = {
+        IdentityFile = "~/.ssh/huggingface";
+        AddKeysToAgent = "yes";
       };
     };
   };

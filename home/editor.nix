@@ -7,7 +7,7 @@
   programs.zed-editor = {
     enable = true;
     installRemoteServer = true;
-    package = inputs.zed.packages.${pkgs.system}.default.overrideAttrs (oldAttrs: {
+    package = inputs.zed.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (oldAttrs: {
       doCheck = false;
     });
 

@@ -66,7 +66,7 @@ return config
     enable = true;
     enableZshIntegration = true;
 
-    package = pkgs.emptyDirectory;
+    package = pkgs.emptyDirectory.overrideAttrs (_: { meta.mainProgram = "ghostty"; });
 
     settings = {
       cursor-style-blink = false;

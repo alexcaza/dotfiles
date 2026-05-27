@@ -44,12 +44,6 @@
       };
       colorize_brackets = true;
       show_edit_predictions = true;
-      assistant = {
-        default_model = {
-          provider = "copilot_chat";
-          model = "gpt-5-mini";
-        };
-      };
 
       base_keymap = "VSCode";
 

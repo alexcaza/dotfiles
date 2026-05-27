@@ -43,7 +43,7 @@
       "google-chrome"
       "firefox"
       "microsoft-edge"
-      "linear-linear"
+      "linear"
       "slack"
       "setapp"
       "zoom"

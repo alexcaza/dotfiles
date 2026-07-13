@@ -53,7 +53,6 @@
     tesseract
     pinentry_mac
     zed-editor
-    supersonic
     difftastic
     uv
     python314

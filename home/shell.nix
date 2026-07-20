@@ -17,7 +17,7 @@
       lj = "lazyjj";
       gcub = "git fetch --prune && git branch -vv | awk '/: gone]/ {print $1}' | xargs git branch -D";
       love = "/Applications/love.app/Contents/MacOS/love";
-      zd = "zeditor";
+      zd = "zed";
     };
     history.size = 10000;
     history.path = "${config.xdg.dataHome}/zsh/history";
@@ -39,8 +39,8 @@
       eval "$(/opt/homebrew/bin/brew shellenv)"
       compctl -g '~/.weztermocil/*(:t:r)' weztermocil
 
-      VISUAL="zeditor --wait"
-      EDITOR="zeditor --wait"
+      VISUAL="zed --wait"
+      EDITOR="zed --wait"
     '';
   };
 

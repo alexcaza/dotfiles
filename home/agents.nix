@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   programs.claude-code = {
     enable = true;
     settings = {

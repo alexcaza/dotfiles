@@ -18,6 +18,7 @@
       gcub = "git fetch --prune && git branch -vv | awk '/: gone]/ {print $1}' | xargs git branch -D";
       love = "/Applications/love.app/Contents/MacOS/love";
       zd = "zed";
+      fixscreen = "sudo rm /Library/Preferences/com.apple.windowserver.displays.plist && rm ~/Library/Preferences/ByHost/com.apple.windowserver.*.plist; echo '====REBOOT REQUIRED===='";
     };
     history.size = 10000;
     history.path = "${config.xdg.dataHome}/zsh/history";
